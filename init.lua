@@ -1,0 +1,2 @@
+require("flo")
+print("hello")
