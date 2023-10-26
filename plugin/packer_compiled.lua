@@ -74,6 +74,12 @@ end
 time([[try_loadstring definition]], false)
 time([[Defining packer_plugins]], true)
 _G.packer_plugins = {
+  ["aura-theme"] = {
+    config = { "\27LJ\2\n9\0\0\3\0\3\0\0056\0\0\0009\0\1\0'\2\2\0B\0\2\1K\0\1\0\26colorscheme aura-dark\bcmd\bvim\0" },
+    loaded = true,
+    path = "/home/ashram/.local/share/nvim/site/pack/packer/start/aura-theme/packages/neovim",
+    url = "https://github.com/daltonmenezes/aura-theme"
+  },
   ["packer.nvim"] = {
     loaded = true,
     path = "/home/ashram/.local/share/nvim/site/pack/packer/start/packer.nvim",
@@ -92,6 +98,14 @@ _G.packer_plugins = {
 }
 
 time([[Defining packer_plugins]], false)
+-- Runtimepath customization
+time([[Runtimepath customization]], true)
+vim.o.runtimepath = vim.o.runtimepath .. ",/home/ashram/.local/share/nvim/site/pack/packer/start/aura-theme/packages/neovim"
+time([[Runtimepath customization]], false)
+-- Config for: aura-theme
+time([[Config for aura-theme]], true)
+try_loadstring("\27LJ\2\n9\0\0\3\0\3\0\0056\0\0\0009\0\1\0'\2\2\0B\0\2\1K\0\1\0\26colorscheme aura-dark\bcmd\bvim\0", "config", "aura-theme")
+time([[Config for aura-theme]], false)
 
 _G._packer.inside_compile = false
 if _G._packer.needs_bufread == true then

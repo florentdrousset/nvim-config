@@ -12,4 +12,12 @@ use {
 -- or                            , branch = '0.1.x',
   requires = { {'nvim-lua/plenary.nvim'} }
 }
+
+use {
+  'daltonmenezes/aura-theme',
+  rtp = 'packages/neovim',
+  config = function()
+    vim.cmd("colorscheme aura-dark") -- Or any Aura theme available
+  end
+}
 end)
