@@ -20,4 +20,6 @@ use {
     vim.cmd("colorscheme aura-dark") -- Or any Aura theme available
   end
 }
+
+use('nvim-treesitter/nvim-treesitter', {run = ':TSUpdate'})
 end)
